@@ -1,0 +1,2 @@
+order_id,order_date,customer,sku,product,category,quantity,unit_price
+O-1,2026-09-01,C-1,X-1,Thing,Misc,1,1.00

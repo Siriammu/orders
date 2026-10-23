@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Order Insights</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/app.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Order Insights</h1>
+    <form id="filter" class="filter" novalidate>
+      <label>From <input type="date" name="from" id="from"></label>
+      <label>To <input type="date" name="to" id="to"></label>
+      <button type="submit">Apply dates</button>
+      <button type="button" id="clear" class="quiet">Show all dates</button>
+      <p id="filter-error" class="field-error" role="alert" hidden></p>
+    </form>
+  </header>
+
+  <div class="layout">
+    <aside class="rail" aria-labelledby="import-title">
+      <h2 id="import-title">Import orders</h2>
+      <form id="upload" class="upload">
+        <label for="file" class="drop">
+          <span class="drop-main">Choose an orders CSV</span>
+          <span class="drop-sub" id="file-name">One row per order line, up to 5 MB</span>
+        </label>
+        <input type="file" id="file" name="file" accept=".csv,text/csv" required>
+        <button type="submit" id="upload-btn">Import CSV</button>
+      </form>
+      <div id="import-report" aria-live="polite"></div>
+    </aside>
+
+    <main id="dashboard" aria-live="polite">
+      <section class="kpis" aria-label="Key figures">
+        <dl id="kpis">
+          <div><dt>Revenue</dt><dd data-kpi="revenue">–</dd></div>
+          <div><dt>Orders</dt><dd data-kpi="orders">–</dd></div>
+          <div><dt>Average order</dt><dd data-kpi="aov">–</dd></div>
+          <div><dt>Units sold</dt><dd data-kpi="units">–</dd></div>
+          <div><dt>Refund rate</dt><dd data-kpi="refundRate">–</dd></div>
+        </dl>
+        <p class="note">Completed orders only. Refund rate is refunded ÷ (completed + refunded).</p>
+      </section>
+
+      <div id="status" class="status" hidden></div>
+
+      <section class="panel" aria-labelledby="daily-title">
+        <h2 id="daily-title">Daily revenue</h2>
+        <div id="chart" class="chart"></div>
+        <details class="as-table">
+          <summary>Show as table</summary>
+          <table id="daily-table">
+            <thead><tr><th scope="col">Date</th><th scope="col" class="num">Revenue</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </details>
+      </section>
+
+      <section class="panel" aria-labelledby="top-title">
+        <h2 id="top-title">Top products by revenue</h2>
+        <div class="table-wrap">
+          <table id="top-table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">SKU</th>
+                <th scope="col" class="num">Units</th>
+                <th scope="col" class="num">Revenue</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <template id="tpl-status">
+    <p class="status-msg"></p>
+    <button type="button" class="retry quiet" hidden>Try again</button>
+  </template>
+</body>
+</html>

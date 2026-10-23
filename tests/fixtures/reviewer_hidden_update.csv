@@ -1,0 +1,3 @@
+order_id,order_date,customer,sku,product,category,quantity,unit_price,status
+O-1005,2026-09-03,C-501,SHO-07,Running Shoes,Footwear,2,89.00,refunded
+O-1013,2026-09-07,C-506,CAP-02,Trail Cap,Accessories,2,14.50,completed

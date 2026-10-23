@@ -1,0 +1,9 @@
+﻿Order_ID , Order_Date,CUSTOMER,sku,product,category,quantity,unit_price,status,notes
+E-1,2026-09-08,C-9,NEW-1,"Mug, ""Large""",  HOME goods ,1,5,COMPLETED,x
+E-1,2026-09-08,C-9,NEW-2,Plate,home goods,2,3.5,refunded,y
+E-2,2026-09-08,C-9,NEW-1,Mug, Large,Home Goods,1,5.00,completed,z
+E-3,2026-02-29,C-9,NEW-1,Mug,Home Goods,1,5.00,completed,z
+E-4,2026-09-08,C-9,NEW-1,Mug,Home Goods,1.5,5.00,completed,z
+E-5,2026-09-08,C-9,NEW-1,Mug,Home Goods,1,5.001,completed,z
+
+E-6,2026-09-09,,,Mug,Home Goods,1,-5,completed,z

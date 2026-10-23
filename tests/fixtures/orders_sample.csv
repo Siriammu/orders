@@ -1,0 +1,16 @@
+order_id,order_date,customer,sku,product,category,quantity,unit_price,status
+O-1001,2026-09-01,C-501,TEE-01,Cotton Tee,Apparel,2,19.99,completed
+O-1001,2026-09-01,C-501,CAP-02,Trail Cap,Accessories,1,14.50,completed
+O-1002,2026-09-01,C-502,SHO-07,Running Shoes,Footwear,1,89.00,completed
+O-1003,2026-09-02,C-503,TEE-01,Cotton Tee,apparel ,3,19.99,completed
+O-1004,2026-09-02,C-504,BAG-03,Daypack 20L,Accessories,1,49.95,refunded
+O-1005,2026-09-03,C-501,SHO-07,Running Shoes,Footwear,2,89.00,completed
+O-1006,2026-09-03,C-505,JKT-04,Rain Jacket,Apparel,1,129.00,cancelled
+O-1007,2026-09-04,C-506,CAP-02,Trail Cap,Accessories,0,14.50,completed
+O-1008,2026-09-31,C-507,TEE-01,Cotton Tee,Apparel,1,19.99,completed
+O-1009,2026-09-05,C-508,BAG-03,Daypack 20L,Accessories,1,abc,completed
+O-1010,2026-09-05,C-509,JKT-04,Rain Jacket,Apparel,1,129.00,shipped
+,2026-09-05,C-510,TEE-01,Cotton Tee,Apparel,1,19.99,completed
+O-1002,2026-09-01,C-502,SHO-07,Running Shoes,Footwear,1,89.00,completed
+O-1011,2026-09-06,C-503,SOC-05,"Socks, 2-Pack",Apparel,4,12.00,Completed
+O-1012,2026-09-06,C-502,JKT-04,Rain Jacket,Apparel,1,129.00,refunded

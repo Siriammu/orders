@@ -1,0 +1,20 @@
+{
+    "name": "candidate/order-insights",
+    "description": "Order Insights take-home: CSV import to SQLite with a SQL-driven dashboard.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo_sqlite": "*",
+        "ext-mbstring": "*",
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": { "OrderInsights\\": "src/" }
+    },
+    "scripts": {
+        "start": "php -S 127.0.0.1:8000 -t public public/index.php",
+        "test": "php tests/acceptance.php",
+        "db:fresh": "php bin/migrate.php --fresh"
+    }
+}
